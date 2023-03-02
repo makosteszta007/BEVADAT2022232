@@ -36,3 +36,6 @@ def reverse_tuples(input_list):
         output.append(tuple(reversed(input_list[idx])))
     return output
 ##seventh task
+def remove_duplicates(input_list):
+    input_list = list(dict.fromkeys(input_list))
+    return input_list
