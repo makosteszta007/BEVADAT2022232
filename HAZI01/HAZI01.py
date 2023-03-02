@@ -24,3 +24,10 @@ def flatten(input_list):
     for idx in range(0,10):
          output.append([input_list[idx]])
     return output
+##fifth task
+def merge_list(*args):
+    output=[]
+    for arg in range(1):      
+          output.append(args)
+    return output
+##sixth task
