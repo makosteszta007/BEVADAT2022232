@@ -11,4 +11,12 @@ def every_nth(n):
     for idx in range(0,11,n):
         output.append(input_list[idx])
     return output
+##third task
+def unique(n):   
+    output = int()
+    for idx in range(0,10):
+       if input_list[idx]==n:
+        output = input_list[idx]
+    return output==n
+
 
