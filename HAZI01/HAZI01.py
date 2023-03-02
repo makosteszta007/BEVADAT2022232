@@ -6,17 +6,21 @@ def subset(start_index,end_index):
         output.append(input_list[idx])
     return output
 ##second task
-def every_nth(n):
+def every_nth(input_list):
     output=[]
-    for idx in range(0,11,n):
+    for idx in range(0,10,3):
         output.append(input_list[idx])
     return output
 ##third task
-def unique(n):   
+def unique(input_list):   
     output = int()
     for idx in range(0,10):
-       if input_list[idx]==n:
+       if input_list[idx]==4:
         output = input_list[idx]
-    return output==n
-
-
+    return output==4
+##fourth task
+def flatten(input_list):
+    output=[]
+    for idx in range(0,10):
+         output.append([input_list[idx]])
+    return output
