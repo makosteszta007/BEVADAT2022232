@@ -31,3 +31,8 @@ def merge_list(*args):
           output.append(args)
     return output
 ##sixth task
+def reverse_tuples(input_list):  
+    output=[]    
+    for idx in range(0,10):     
+      output.append(input_list[9-idx])     
+    return output
