@@ -68,3 +68,20 @@ def merge_dicts(*dicts):
     for dict in dicts:            
         output.update(dict)
     return output
+##eleventh task
+def by_parity(input_list):
+    output={}  
+    even_list=list()
+    odd_list=list()
+    for idx in range(0,len(input_list)):
+        if input_list[idx]%2==0:
+           even_list.append(input_list[idx])           
+        else:
+           odd_list.append(input_list[idx])
+    output['Even'] = even_list
+    output['Odd'] = odd_list
+    return output
+
+
+
+
