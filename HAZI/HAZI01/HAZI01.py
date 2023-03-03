@@ -63,3 +63,8 @@ def split_into_chunks(input_list,chunk_size):
             chunk = []       
     return result
 ##tenth task
+def merge_dicts(*dicts):
+    output={}    
+    for dict in dicts:            
+        output.update(dict)
+    return output
