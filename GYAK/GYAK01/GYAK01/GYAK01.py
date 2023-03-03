@@ -22,3 +22,10 @@ def element_wise_sum(input_list_1,input_list_2):
         if idx < len(input_list_2):
             output[1] += input_list_2[idx]
     return output
+##fourth task
+def dict_to_list(input_dict):
+    output=list()
+    for key,value in input_dict.items():
+        output.append((key,value))
+    return output
+
