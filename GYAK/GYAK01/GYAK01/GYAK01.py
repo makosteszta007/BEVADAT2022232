@@ -13,3 +13,12 @@ def is_odd(input_list):
         else:
             input_list[idx]=False
      return input_list
+ ##third task
+def element_wise_sum(input_list_1,input_list_2):
+    output=[0,0]   
+    for idx in range(0,max(len(input_list_1),len(input_list_2))):
+        if idx < len(input_list_1):
+            output[0] += input_list_1[idx]
+        if idx < len(input_list_2):
+            output[1] += input_list_2[idx]
+    return output
