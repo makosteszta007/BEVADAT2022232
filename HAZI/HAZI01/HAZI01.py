@@ -12,10 +12,15 @@ def every_nth(input_list,n):
     return output
 ##third task
 def unique(input_list):
-    for idx in range(0,len(input_list)):
-       if input_list[idx]==4:
+    a = 0
+    list(input_list).sort()
+    for idx in range(0,len(input_list)-1):
+        if input_list[idx]<input_list[idx+1]:
+            a+=1
+    if a==len(input_list)-1:
         return True
-    return False
+    else:
+        return False
 ##fourth task
 def flatten(input_list):
     a = len(input_list)
