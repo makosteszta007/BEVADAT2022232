@@ -32,8 +32,9 @@ def flatten(input_list):
 ##fifth task
 def merge_list(*args):
     output=[]
-    for arg in range(1):      
-          output.append(args)
+    for arg in args:      
+        for idx in range(0,len(arg)):
+            output.append(arg[idx])
     return output
 ##sixth task
 def reverse_tuples(input_list):      
