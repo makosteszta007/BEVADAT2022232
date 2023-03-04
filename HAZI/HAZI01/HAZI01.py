@@ -1,5 +1,5 @@
-## first task
-def subset(start_index,end_index):
+##first task
+def subset(input_list,start_index,end_index):
     output=[]
     for idx in range(start_index, end_index):
         output.append(input_list[idx])
