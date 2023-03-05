@@ -91,5 +91,5 @@ def mean_key_value(input_dict):
         a=0
         for i in input_dict[idx]:
             a+=i
-        input_dict[idx]=int(a/len(input_dict[idx]))
+        input_dict[idx]=a/len(input_dict[idx])
     return input_dict

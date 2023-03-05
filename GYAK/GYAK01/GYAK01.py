@@ -1,9 +1,11 @@
 ##first task
 def contains_odd(input_list):
-    odd = False
-    for idx in range(0,len(input_list)):
-        if input_list[idx]%2!=0:
-            odd = True
+    odd = False   
+    idx=0
+    while idx<len(input_list) and input_list[idx]%2==0:
+          idx += 1
+    if idx!=len(input_list):
+        odd=True
     return odd
 ##second task
 def is_odd(input_list):
