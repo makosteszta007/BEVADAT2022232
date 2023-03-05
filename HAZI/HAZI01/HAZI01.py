@@ -82,8 +82,8 @@ def by_parity(input_list):
            even_list.append(input_list[idx])           
         else:
            odd_list.append(input_list[idx])
-    output['Even'] = even_list
-    output['Odd'] = odd_list
+    output['even'] = even_list
+    output['odd'] = odd_list
     return output
 ##twelfth task
 def mean_key_value(input_dict):
