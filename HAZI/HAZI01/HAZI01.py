@@ -55,18 +55,17 @@ def transpose(input_matrix):
 ##ninth task
 def split_into_chunks(input_list,chunk_size):      
     a = len(input_list)
-    for idx in range(0,a):
-         for idx2 in range(0,len(input_list[0])):
-             input_list.append(input_list[0][idx2])
-         input_list.remove(input_list[0])
-    result = []
-    chunk = []
-    for item in input_list:
-        chunk.append(item)
-        if len(chunk) == chunk_size:
-            result.append(chunk)
-            chunk = []       
-    return result
+    for idx in range(0,int(a/chunk_size)):
+        input_list.append(list())
+        for idx2 in range(0,chunk_size):            
+             input_list[len(input_list)-1].append(input_list[0])
+             input_list.remove(input_list[0])
+    if len(input_list)>chunk_size:
+         input_list.append(list())
+         for i in range(0,a%chunk_size):
+             input_list[len(input_list)-1].append(input_list[0])
+             input_list.remove(input_list[0])
+    return input_list
 ##tenth task
 def merge_dicts(*dicts):
     output={}    
