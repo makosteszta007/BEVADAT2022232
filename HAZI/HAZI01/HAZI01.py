@@ -53,7 +53,7 @@ def split_into_chunks(input_list,chunk_size):
         for idx2 in range(0,chunk_size):            
              input_list[len(input_list)-1].append(input_list[0])
              input_list.remove(input_list[0])
-    if len(input_list)>chunk_size:
+    if a%chunk_size!=0:
          input_list.append(list())
          for i in range(0,a%chunk_size):
              input_list[len(input_list)-1].append(input_list[0])
