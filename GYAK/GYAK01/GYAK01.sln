@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.32929.386
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "GYAK01", "GYAK01\GYAK01.pyproj", "{1ABA9F0F-35B9-4730-B17C-43EA4D37044C}"
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "GYAK01", "GYAK01.pyproj", "{1ABA9F0F-35B9-4730-B17C-43EA4D37044C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -18,6 +18,6 @@ Global
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {A1809218-B8D8-4342-B967-9AF9088C2025}
+		SolutionGuid = {157E34DC-0960-4CED-9C06-4C5E84825E84}
 	EndGlobalSection
 EndGlobal
