@@ -1,9 +1,6 @@
 ##first task
 def subset(input_list,start_index,end_index):
-    output=[]
-    for idx in range(start_index, end_index):
-        output.append(input_list[idx])
-    return output
+    return input_list[start_index:end_index]
 ##second task
 def every_nth(input_list,n):
     output=[]
