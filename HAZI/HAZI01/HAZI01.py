@@ -27,7 +27,7 @@ def flatten(input_list):
          input_list.remove(input_list[0])
     return input_list
 ##fifth task
-def merge_list(*args):
+def merge_lists(*args):
     output=[]
     for arg in args:      
         for idx in range(0,len(arg)):
