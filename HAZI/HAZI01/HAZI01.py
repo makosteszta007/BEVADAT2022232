@@ -43,12 +43,8 @@ def remove_duplicates(input_list):
     input_list = list(dict.fromkeys(input_list))
     return input_list
 ##eighth task
-def transpose(input_matrix):
-    a=len(input_matrix)
-    for i in range(a):
-        for j in range(i+1,a):
-            input_matrix[i][j], input_matrix[j][i] = input_matrix[j][i], input_matrix[i][j]
-    return input_matrix
+def transpose(input_matrix):    
+    return [[input_matrix[j][i] for j in range(len(input_matrix))] for i in range(len(input_matrix[0]))]
 ##ninth task
 def split_into_chunks(input_list,chunk_size):      
     a = len(input_list)
