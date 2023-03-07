@@ -11,10 +11,12 @@ def set_one(input_array):
 def do_transpose(input_matrix):
     input_matrix=np.transpose(input_matrix)
     return input_matrix
-print(do_transpose([[1,2],[3,4]]))
 ##fourth task
 def round_array(input_array):        
     return np.array(input_array).round(2)
 ##fifth task
 def bool_array(input_array):
     return np.array(input_array,dtype=bool)
+##sixth task
+def invert_bool_array(input_array):
+    return np.invert(np.array(input_array,dtype=bool))
