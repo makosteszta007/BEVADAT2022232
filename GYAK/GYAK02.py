@@ -14,4 +14,6 @@ def do_transpose(input_matrix):
 ##fourth task
 def round_array(input_array):        
     return np.array(input_array).round(2)
-
+##fifth task
+def bool_array(input_array):
+    return np.array(input_array,dtype=bool)
