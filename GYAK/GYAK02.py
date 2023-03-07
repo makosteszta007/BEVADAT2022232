@@ -11,4 +11,7 @@ def set_one(input_array):
 def do_transpose(input_matrix):
     np.transpose(input_matrix)
     return input_matrix
+##fourth task
+def round_array(input_array):        
+    return np.array(input_array).round(2)
 
