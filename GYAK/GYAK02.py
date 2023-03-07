@@ -20,3 +20,7 @@ def bool_array(input_array):
 ##sixth task
 def invert_bool_array(input_array):
     return np.invert(np.array(input_array,dtype=bool))
+##seventh task
+def flatten(input_array):    
+    return np.ndarray.flatten(np.array(input_array))
+print(flatten([[1,2],[3,4]]))
