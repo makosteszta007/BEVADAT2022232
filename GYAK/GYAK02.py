@@ -9,8 +9,9 @@ def set_one(input_array):
     return input_array
 ##third task
 def do_transpose(input_matrix):
-    np.transpose(input_matrix)
+    input_matrix=np.transpose(input_matrix)
     return input_matrix
+print(do_transpose([[1,2],[3,4]]))
 ##fourth task
 def round_array(input_array):        
     return np.array(input_array).round(2)
