@@ -12,8 +12,8 @@ def do_transpose(input_matrix)->np.array:
     input_matrix=np.transpose(input_matrix)
     return input_matrix
 ##fourth task
-def round_array(input_array)->np.array:        
-    return np.array(input_array).round(2)
+def round_array(input_array,n=2)->np.array:        
+    return np.array(input_array).round(n)
 ##fifth task
 def bool_array(input_array)->np.array:
     return np.array(input_array,dtype=bool)
