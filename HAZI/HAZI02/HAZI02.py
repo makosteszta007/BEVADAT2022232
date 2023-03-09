@@ -65,4 +65,6 @@ def replace_by_value(input_array,n):
 ##ninth task
 def array_multi(input_array):   
     return np.prod(input_array)
-print(array_multi([1,2,3,4]))
+##tenth task
+def array_multi_2d(array1,array2):
+    return [np.prod(array1),np.prod(array2)]
