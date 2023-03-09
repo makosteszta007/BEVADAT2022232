@@ -52,4 +52,13 @@ def replace_odd_numbers(input_array):
      for idx in range(0,len(idxs)):
          input_array[idxs]=-1
      return input_array
-print(replace_odd_numbers([1,2,3,4,5,6]))
+##eighth task
+def replace_by_value(input_array,n):
+    input_array=np.array(input_array)
+    idxs = np.where(input_array<n)
+    idxs2= np.where(input_array>=n)
+    idxs.__add__(idxs2)
+    for idxs in idxs:
+        input_array[idxs] = -1
+        input_array[idxs2] = 1
+    return input_array
