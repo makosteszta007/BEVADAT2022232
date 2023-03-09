@@ -11,4 +11,11 @@ def compare_two_array(array1,array2) -> np.array:
             if array1[i]==array2[j]:
                 output.append(i)
     return output
-print(compare_two_array([11,2,13,45],[2,1,3,45]))
+##third task
+def get_array_shape(input_array) -> np.array:
+    input_array=np.array(input_array)
+    output = {}
+    output["sor"]=np.shape(input_array)[0]
+    output["oszlop"]=np.shape(input_array)[1]
+    output["melyseg"]=np.shape(input_array)[0]-1   
+    return output
