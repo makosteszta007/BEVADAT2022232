@@ -3,4 +3,12 @@ import numpy as np
 def column_swap(input_array):
     input_array=np.array(input_array)      
     return input_array[:,[1,0]]
-print(column_swap([[1,2],[3,4]]))
+##second task
+def compare_two_array(array1,array2) -> np.array:
+    output=[]
+    for i in range(0,len(array1)):
+        for j in range(0,len(array2)):
+            if array1[i]==array2[j]:
+                output.append(i)
+    return output
+print(compare_two_array([11,2,13,45],[2,1,3,45]))
