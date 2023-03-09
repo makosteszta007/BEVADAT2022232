@@ -68,3 +68,7 @@ def array_multi(input_array):
 ##tenth task
 def array_multi_2d(array1,array2):
     return [np.prod(array1),np.prod(array2)]
+##eleventh task
+def add_border(input_array)->np.array:
+    return np.pad(input_array, pad_width=1, mode='constant', constant_values=0)
+print(add_border([[1,2],[3,4]]))
