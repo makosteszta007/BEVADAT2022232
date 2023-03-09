@@ -45,3 +45,11 @@ def eval_classification(input_array):
      maxv=max(input_array[1])
      maxi = list(input_array[1]).index(maxv)
      return input_array[0][maxi]
+##seventh task
+def replace_odd_numbers(input_array):
+     input_array=np.array(input_array)
+     idxs=np.where(input_array%2!=0)
+     for idx in range(0,len(idxs)):
+         input_array[idxs]=-1
+     return input_array
+print(replace_odd_numbers([1,2,3,4,5,6]))
