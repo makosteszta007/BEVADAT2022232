@@ -40,4 +40,8 @@ def decode_Y(input_array,n) -> np.array:
             if input_array[i][j]==1:
                 output.append(j)            
     return output
-print(decode_Y([[0,1,0,0],[0,0,1,0],[1,0,0,0],[0,0,0,1]],4))
+##sixth task
+def eval_classification(input_array):   
+     maxv=max(input_array[1])
+     maxi = list(input_array[1]).index(maxv)
+     return input_array[0][maxi]
