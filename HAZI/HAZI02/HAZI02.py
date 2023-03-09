@@ -19,6 +19,7 @@ def get_array_shape(input_array) -> np.array:
     output["oszlop"]=np.shape(input_array)[1]
     output["melyseg"]=np.shape(input_array)[0]-1   
     return output
+##fourth task
 def encode_Y(input_array,n):
     input_array=np.array(input_array)
     output=[]
@@ -30,3 +31,13 @@ def encode_Y(input_array,n):
             else:
                 output[i].append(0)
     return output
+##fifth task
+def decode_Y(input_array,n) -> np.array:
+    input_array=np.array(input_array)
+    output=[]
+    for i in range(0,len(input_array)):
+        for j in range(n):
+            if input_array[i][j]==1:
+                output.append(j)            
+    return output
+print(decode_Y([[0,1,0,0],[0,0,1,0],[1,0,0,0],[0,0,0,1]],4))
