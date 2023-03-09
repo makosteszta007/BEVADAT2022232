@@ -62,3 +62,7 @@ def replace_by_value(input_array,n):
         input_array[idxs] = -1
         input_array[idxs2] = 1
     return input_array
+##ninth task
+def array_multi(input_array):   
+    return np.prod(input_array)
+print(array_multi([1,2,3,4]))
