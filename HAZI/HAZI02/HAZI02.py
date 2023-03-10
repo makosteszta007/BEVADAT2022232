@@ -4,15 +4,10 @@ import numpy as np
 ## first task 
 def column_swap(input_array):
         return np.array(input_array)[:,[1,0]]
-print(column_swap([[1,2],[3,4]]))
 ##second task
-def compare_two_array(array1,array2) -> np.array:
-    output=[]
-    for i in range(0,len(array1)):
-        for j in range(0,len(array2)):
-            if array1[i]==array2[j]:
-                output.append(i)
-    return output
+def compare_two_array(array1,array2) -> np.array:  
+   return np.reshape(1,np.product(np.where(np.array(array1)==np.array(array2))))
+print(compare_two_array([7,8,9],[9,8,7]))
 ##third task
 def get_array_shape(input_array) -> np.array:
     input_array=np.array(input_array)
