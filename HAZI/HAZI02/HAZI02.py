@@ -1,3 +1,4 @@
+from datetime import datetime
 import numpy as np
 ## first task 
 def column_swap(input_array):
@@ -71,4 +72,8 @@ def array_multi_2d(array1,array2):
 ##eleventh task
 def add_border(input_array)->np.array:
     return np.pad(input_array, pad_width=1, mode='constant', constant_values=0)
-print(add_border([[1,2],[3,4]]))
+##twelfth task
+def list_days(date1,date2):    
+    date1=datetime.strptime(date1, "%Y-%m").date()
+    date2=datetime.strptime(date2, "%Y-%m").date()
+    return np.arange(date1,date2)
