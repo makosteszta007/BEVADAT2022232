@@ -3,8 +3,8 @@ from datetime import timedelta
 import numpy as np
 ## first task 
 def column_swap(input_array):
-    input_array=np.array(input_array)      
-    return input_array[:,[1,0]]
+        return np.array(input_array)[:,[1,0]]
+print(column_swap([[1,2],[3,4]]))
 ##second task
 def compare_two_array(array1,array2) -> np.array:
     output=[]
