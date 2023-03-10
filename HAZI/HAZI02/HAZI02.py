@@ -1,4 +1,5 @@
 from datetime import datetime
+from datetime import timedelta
 import numpy as np
 ## first task 
 def column_swap(input_array):
@@ -80,4 +81,10 @@ def list_days(date1,date2):
 ##thirteenth task
 def current_date():
     return np.datetime64('today')
-print(current_date())
+##fourteenth task
+def sec_from_1970():   
+    now = datetime.now()
+    then = datetime.strptime('1970-01-01',"%Y-%m-%d")
+    diff = (now - then).total_seconds()
+    return int(diff)
+print(sec_from_1970())
