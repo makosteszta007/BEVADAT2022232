@@ -35,17 +35,11 @@ def eval_classification(input_array):
 ##seventh task
 def replace_odd_numbers(input_array):    
      return np.where(np.array(input_array)%2==0,input_array,-1)
-print(replace_odd_numbers([1,2,3,4,5,6]))
 ##eighth task
 def replace_by_value(input_array,n):
-    input_array=np.array(input_array)
-    idxs = np.where(input_array<n)
-    idxs2= np.where(input_array>=n)
-    idxs.__add__(idxs2)
-    for idxs in idxs:
-        input_array[idxs] = -1
-        input_array[idxs2] = 1
-    return input_array
+    input_array= np.where(np.array(input_array)>=n,input_array,-1) 
+    return np.where(np.array(input_array)<n,input_array,1)
+print(replace_by_value([1,2,5,0],2))
 ##ninth task
 def array_multi(input_array):   
     return np.prod(input_array)
