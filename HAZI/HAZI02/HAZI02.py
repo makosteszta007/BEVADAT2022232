@@ -1,9 +1,7 @@
-from datetime import datetime
-from datetime import timedelta
 import numpy as np
 ## first task 
 def column_swap(input_array):
-        return np.array(input_array)[:,[1,0]]
+        return np.fliplr(input_array)
 ##second task
 def compare_two_array(array1,array2) -> np.array:  
    return np.reshape(1,np.product(np.where(np.array(array1)==np.array(array2))))
@@ -34,7 +32,6 @@ def decode_Y(input_array,n) -> np.array:
 ##sixth task
 def eval_classification(input_array):
      return input_array[0][list(input_array[1]).index(max(input_array[1]))]
-print(eval_classification([["a","b","c"],[0.3,0.6,0.1]]))
 ##seventh task
 def replace_odd_numbers(input_array):
      input_array=np.array(input_array)
@@ -63,15 +60,12 @@ def add_border(input_array)->np.array:
     return np.pad(input_array, pad_width=1, mode='constant', constant_values=0)
 ##twelfth task
 def list_days(date1,date2):    
-    date1=datetime.strptime(date1, "%Y-%m").date()
-    date2=datetime.strptime(date2, "%Y-%m").date()
+    
     return np.arange(date1,date2)
 ##thirteenth task
 def current_date():
     return np.datetime64('today')
 ##fourteenth task
 def sec_from_1970():   
-    now = datetime.now()
-    then = datetime.strptime('1970-01-01',"%Y-%m-%d")
-    diff = (now - then).total_seconds()
-    return int(diff)
+    
+    return 
