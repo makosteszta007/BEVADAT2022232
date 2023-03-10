@@ -39,7 +39,6 @@ def replace_odd_numbers(input_array):
 def replace_by_value(input_array,n):
     input_array= np.where(np.array(input_array)>=n,input_array,-1) 
     return np.where(np.array(input_array)<n,input_array,1)
-print(replace_by_value([1,2,5,0],2))
 ##ninth task
 def array_multi(input_array):   
     return np.prod(input_array)
@@ -50,9 +49,8 @@ def array_multi_2d(array1,array2):
 def add_border(input_array)->np.array:
     return np.pad(input_array, pad_width=1, mode='constant', constant_values=0)
 ##twelfth task
-def list_days(date1,date2):    
-    
-    return np.arange(date1,date2)
+def list_days(date1,date2): 
+    return np.arange(np.datetime64(date1),np.datetime64(date2),np.timedelta64(1, "D"))
 ##thirteenth task
 def current_date():
     return np.datetime64('today')
