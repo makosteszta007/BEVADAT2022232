@@ -11,16 +11,10 @@ def get_array_shape(input_array) -> np.array:
 ##fourth task
 def encode_Y(input_array,n):    
     return np.eye(n)[np.array(input_array).reshape(-1)]
-print(encode_Y([1,2,0,3],4))
 ##fifth task
-def decode_Y(input_array,n) -> np.array:
-    input_array=np.array(input_array)
-    output=[]
-    for i in range(0,len(input_array)):
-        for j in range(n):
-            if input_array[i][j]==1:
-                output.append(j)            
-    return output
+def decode_Y(input_array) -> np.array:  
+    return np.where(np.array(input_array)==1)[1]
+print(decode_Y([[0,1,0,0],[0,0,1,0],[1,0,0,0],[0,0,0,1]]))
 ##sixth task
 def eval_classification(input_array):
      return input_array[0][list(input_array[1]).index(max(input_array[1]))]
@@ -49,4 +43,3 @@ def current_date():
 ##fourteenth task
 def sec_from_1970():
     return int((np.datetime64('today')-np.datetime64('1970-01-01'))/np.timedelta64(1, "s"))
-print(sec_from_1970())
