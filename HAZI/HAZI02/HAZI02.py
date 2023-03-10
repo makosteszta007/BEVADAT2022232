@@ -87,4 +87,3 @@ def sec_from_1970():
     then = datetime.strptime('1970-01-01',"%Y-%m-%d")
     diff = (now - then).total_seconds()
     return int(diff)
-print(sec_from_1970())
