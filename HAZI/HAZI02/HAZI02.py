@@ -10,7 +10,6 @@ def compare_two_array(array1,array2) -> np.array:
 ##third task
 def get_array_shape(input_array) -> np.array:    
     return f"sor: {np.shape(input_array)[0]} oszlop: {np.shape(input_array)[1]} melyseg: {np.shape(input_array)[0]-1}"
-print(get_array_shape([[1,2,3],[4,5,6]]))
 ##fourth task
 def encode_Y(input_array,n):
     input_array=np.array(input_array)
@@ -33,10 +32,9 @@ def decode_Y(input_array,n) -> np.array:
                 output.append(j)            
     return output
 ##sixth task
-def eval_classification(input_array):   
-     maxv=max(input_array[1])
-     maxi = list(input_array[1]).index(maxv)
-     return input_array[0][maxi]
+def eval_classification(input_array):
+     return input_array[0][list(input_array[1]).index(max(input_array[1]))]
+print(eval_classification([["a","b","c"],[0.3,0.6,0.1]]))
 ##seventh task
 def replace_odd_numbers(input_array):
      input_array=np.array(input_array)
