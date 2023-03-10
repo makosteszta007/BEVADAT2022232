@@ -33,12 +33,9 @@ def decode_Y(input_array,n) -> np.array:
 def eval_classification(input_array):
      return input_array[0][list(input_array[1]).index(max(input_array[1]))]
 ##seventh task
-def replace_odd_numbers(input_array):
-     input_array=np.array(input_array)
-     idxs=np.where(input_array%2!=0)
-     for idx in range(0,len(idxs)):
-         input_array[idxs]=-1
-     return input_array
+def replace_odd_numbers(input_array):    
+     return np.where(np.array(input_array)%2==0,input_array,-1)
+print(replace_odd_numbers([1,2,3,4,5,6]))
 ##eighth task
 def replace_by_value(input_array,n):
     input_array=np.array(input_array)
