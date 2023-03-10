@@ -77,3 +77,7 @@ def list_days(date1,date2):
     date1=datetime.strptime(date1, "%Y-%m").date()
     date2=datetime.strptime(date2, "%Y-%m").date()
     return np.arange(date1,date2)
+##thirteenth task
+def current_date():
+    return np.datetime64('today')
+print(current_date())
