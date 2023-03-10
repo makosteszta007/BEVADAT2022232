@@ -14,7 +14,6 @@ def encode_Y(input_array,n):
 ##fifth task
 def decode_Y(input_array) -> np.array:  
     return np.where(np.array(input_array)==1)[1]
-print(decode_Y([[0,1,0,0],[0,0,1,0],[1,0,0,0],[0,0,0,1]]))
 ##sixth task
 def eval_classification(input_array):
      return input_array[0][list(input_array[1]).index(max(input_array[1]))]
