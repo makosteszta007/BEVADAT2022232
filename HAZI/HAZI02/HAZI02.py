@@ -9,17 +9,9 @@ def compare_two_array(array1,array2) -> np.array:
 def get_array_shape(input_array) -> np.array:    
     return f"sor: {np.shape(input_array)[0]} oszlop: {np.shape(input_array)[1]} melyseg: {np.shape(input_array)[0]-1}"
 ##fourth task
-def encode_Y(input_array,n):
-    input_array=np.array(input_array)
-    output=[]
-    for i in range(n):
-        output.append(list())
-        for j in range(n):
-            if input_array[i]==j:
-                output[i].append(1)
-            else:
-                output[i].append(0)
-    return output
+def encode_Y(input_array,n):    
+    return np.eye(n)[np.array(input_array).reshape(-1)]
+print(encode_Y([1,2,0,3],4))
 ##fifth task
 def decode_Y(input_array,n) -> np.array:
     input_array=np.array(input_array)
