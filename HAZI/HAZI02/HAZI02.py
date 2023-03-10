@@ -7,15 +7,10 @@ def column_swap(input_array):
 ##second task
 def compare_two_array(array1,array2) -> np.array:  
    return np.reshape(1,np.product(np.where(np.array(array1)==np.array(array2))))
-print(compare_two_array([7,8,9],[9,8,7]))
 ##third task
-def get_array_shape(input_array) -> np.array:
-    input_array=np.array(input_array)
-    output = {}
-    output["sor"]=np.shape(input_array)[0]
-    output["oszlop"]=np.shape(input_array)[1]
-    output["melyseg"]=np.shape(input_array)[0]-1   
-    return output
+def get_array_shape(input_array) -> np.array:    
+    return f"sor: {np.shape(input_array)[0]} oszlop: {np.shape(input_array)[1]} melyseg: {np.shape(input_array)[0]-1}"
+print(get_array_shape([[1,2,3],[4,5,6]]))
 ##fourth task
 def encode_Y(input_array,n):
     input_array=np.array(input_array)
