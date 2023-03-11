@@ -30,9 +30,10 @@ def replace_by_value(input_array,n):
 ##ninth task
 def array_multi(input_array):   
     return np.prod(input_array)
-##tenth taskbb
-def array_multi_2d(array):
+##tenth task
+def array_multi_2d(array) -> np.array:
     return [np.prod(array[0]),np.prod(array[1])]
+print(array_multi_2d([[1, 2], [3, 4]]))
 ##eleventh task
 def add_border(input_array)->np.array:
     return np.pad(input_array, pad_width=1, mode='constant', constant_values=0)
