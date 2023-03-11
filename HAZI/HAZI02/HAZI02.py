@@ -42,6 +42,7 @@ def list_days(date1,date2):
 ##thirteenth task
 def current_date():
     return np.datetime64('today')
+print(current_date())
 ##fourteenth taskbbb
 def sec_from_1970():
     return int((np.datetime64('now')-np.datetime64('1970-01-01 00:00:00'))/np.timedelta64(1, "s"))
