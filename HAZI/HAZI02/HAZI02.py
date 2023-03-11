@@ -16,9 +16,9 @@ def encode_Y(input_array,n):
 ##fifth task
 def decode_Y(input_array) -> np.array:  
     return np.where(np.array(input_array)==1)[1]
-##sixth taskbb
+##sixth task
 def eval_classification(input_list,input_array):
-    input_list=np.array(input_list)    
+    input_list=np.array(input_list)
     return input_list[np.where(np.array(input_array)==max(input_array))[0]]
 ##seventh task
 def replace_odd_numbers(input_array):    
