@@ -5,7 +5,6 @@ def column_swap(input_array):
 ##second task
 def compare_two_array(array1,array2):  
    return np.where(np.array(array1)==np.array(array2))[0]
-print(compare_two_array([1,2,3],[3,2,1]))
 ##third task
 def get_array_shape(input_array): 
     input_array=np.matrix(input_array)
@@ -18,8 +17,9 @@ def encode_Y(input_array,n):
 def decode_Y(input_array) -> np.array:  
     return np.where(np.array(input_array)==1)[1]
 ##sixth task
-def eval_classification(input_array):
-     return input_array[0][list(input_array[1]).index(max(input_array[1]))]
+def eval_classification(input_list,input_array):
+    input_list=np.array(input_list)    
+    return input_list[np.where(np.array(input_array)==max(input_array))[0]]
 ##seventh task
 def replace_odd_numbers(input_array):    
      return np.where(np.array(input_array)%2==0,input_array,-1)
