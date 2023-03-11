@@ -33,7 +33,6 @@ def array_multi(input_array):
 ##tenth task
 def array_multi_2d(array) -> np.array:
     return [np.prod(array[0]),np.prod(array[1])]
-print(array_multi_2d([[1, 2], [3, 4]]))
 ##eleventh task
 def add_border(input_array)->np.array:
     return np.pad(input_array, pad_width=1, mode='constant', constant_values=0)
@@ -45,4 +44,5 @@ def current_date():
     return np.datetime64('today')
 ##fourteenth taskbbb
 def sec_from_1970():
-    return int((np.datetime64('now')-np.datetime64('1970-01-01 00:00:00'))/np.timedelta64(1, "s"))
+    diffInSec = int((np.datetime64('now')-np.datetime64('1970-01-01 00:00:00'))/np.timedelta64(1, "s"))
+    return diffInSec
