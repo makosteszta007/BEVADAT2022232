@@ -5,7 +5,7 @@ def column_swap(input_array):
 ##second task
 def compare_two_array(array1,array2) -> np.array:  
    return np.where(np.array(array1)==np.array(array2))[0]
-##third taskbbb
+##third task
 def get_array_shape(input_array): 
     input_array=np.matrix(input_array)
     rows,columns = np.array(input_array).shape
