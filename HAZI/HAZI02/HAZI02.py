@@ -2,7 +2,7 @@ import numpy as np
 ## first task 
 def column_swap(input_array):
         return np.fliplr(input_array)
-##second taskbb
+##second task
 def compare_two_array(array1,array2) -> np.array:  
    return np.where(np.array(array1)==np.array(array2))[0]
 ##third taskbbb
