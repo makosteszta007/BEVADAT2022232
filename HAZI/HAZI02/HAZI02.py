@@ -29,10 +29,10 @@ def replace_by_value(input_array,n):
     input_array= np.where(np.array(input_array)>=n,input_array,-1) 
     return np.where(np.array(input_array)<n,input_array,1)
 ##ninth task
-def array_multi(input_array):   
+def array_multi(input_array) -> np.array:   
     return np.prod(input_array)
 ##tenth task
-def array_multi_2d(array):
+def array_multi_2d(array) -> np.array:
     return [np.prod(array[0]),np.prod(array[1])]
 ##eleventh task
 def add_border(input_array)->np.array:
@@ -40,7 +40,7 @@ def add_border(input_array)->np.array:
 ##twelfth task
 def list_days(date1,date2): 
     return np.arange(np.datetime64(date1),np.datetime64(date2),np.timedelta64(1, "D"))
-##thirteenth taskbb
+##thirteenth task
 def current_date():
     return np.datetime64('today')
 ##fourteenth task
