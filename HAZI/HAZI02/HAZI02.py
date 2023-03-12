@@ -4,7 +4,8 @@ def column_swap(input_array):
         return np.fliplr(input_array)
 ##second task
 def compare_two_array(array1,array2) -> np.array:  
-   return np.where(np.array(array1)==np.array(array2))[0]
+   output = np.where(np.array(array1)==np.array(array2))[0]
+   return output.tolist()
 ##third task
 def get_array_shape(input_array): 
     input_array=np.matrix(input_array)
@@ -31,7 +32,7 @@ def replace_by_value(input_array,n):
 def array_multi(input_array):   
     return np.prod(input_array)
 ##tenth task
-def array_multi_2d(array) -> np.array:
+def array_multi_2d(array):
     return [np.prod(array[0]),np.prod(array[1])]
 ##eleventh task
 def add_border(input_array)->np.array:
