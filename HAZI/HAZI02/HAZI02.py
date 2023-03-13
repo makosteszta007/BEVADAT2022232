@@ -9,8 +9,10 @@ def compare_two_array(array1,array2) -> np.array:
 ##third task
 def get_array_shape(input_array): 
     input_array=np.matrix(input_array)
-    rows,columns = np.array(input_array).shape
-    return f"sor: {rows} oszlop: {columns} melyseg: {rows-1}"
+    rows,columns = np.array(input_array).shape   
+    result= "sor : {}, oszlop: {}, melyseg: {}".format(rows,columns,rows-1)
+    return result
+print(get_array_shape([[1,2,3], [4,5,6]]))
 ##fourth task
 def encode_Y(input_array,n):    
     return np.eye(n)[np.array(input_array).reshape(-1)]
