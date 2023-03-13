@@ -11,7 +11,7 @@ def get_array_shape(input_array):
     input_array=np.matrix(input_array)
     rows,columns = np.array(input_array).shape   
     result= "sor : {}, oszlop: {}, melyseg: {}".format(rows,columns,rows-1)
-    return result
+    return np.array(result)
 ##fourth task
 def encode_Y(input_array,n):    
     return np.eye(n)[np.array(input_array).reshape(-1)]
