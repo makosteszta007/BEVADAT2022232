@@ -43,7 +43,7 @@ def add_border(input_array)->np.array:
 def list_days(date1,date2): 
     return np.arange(np.datetime64(date1),np.datetime64(date2),np.timedelta64(1, "D"))
 ##thirteenth task
-def current_date():
+def get_act_date():
     return np.datetime64('today')
 ##fourteenth task
 def sec_from_1970():
