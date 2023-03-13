@@ -12,7 +12,6 @@ def get_array_shape(input_array):
     rows,columns = np.array(input_array).shape   
     result= "sor : {}, oszlop: {}, melyseg: {}".format(rows,columns,rows-1)
     return result
-print(get_array_shape([[1,2,3], [4,5,6]]))
 ##fourth task
 def encode_Y(input_array,n):    
     return np.eye(n)[np.array(input_array).reshape(-1)]
@@ -34,8 +33,8 @@ def replace_by_value(input_array,n):
 def array_multi(input_array) -> np.array:   
     return np.prod(input_array)
 ##tenth task
-def array_multi_2d(array) -> np.array:
-    return [np.prod(array[0]),np.prod(array[1])]
+def array_multi_2d(array):
+    return np.prod(array, axis=1) 
 ##eleventh task
 def add_border(input_array)->np.array:
     return np.pad(input_array, pad_width=1, mode='constant', constant_values=0)
@@ -46,6 +45,5 @@ def list_days(date1,date2):
 def get_act_date():
     return np.datetime64('today')
 ##fourteenth task
-def sec_from_1970():
-    diffInSec = int((np.datetime64('now')-np.datetime64('1970-01-01 00:00:00'))/np.timedelta64(1,"s"))
-    return diffInSec
+def sec_from_1970():    
+    return (np.datetime64('now')-np.datetime64('1970-01-01T00:02:00')).astype(int)
