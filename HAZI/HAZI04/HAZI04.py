@@ -20,3 +20,10 @@ def math_passed_count(df) -> int:
     passed = (new_df['math score']>=50).sum()
     return passed
 print(math_passed_count(csv_to_df()))
+##fourth task
+def did_pre_course(df):
+    df = pn.DataFrame(df)
+    new_df = df.copy()
+    df_did_precourse=new_df[new_df['test preparation course'].values == "completed"]
+    return df_did_precourse
+print(did_pre_course(csv_to_df()))
