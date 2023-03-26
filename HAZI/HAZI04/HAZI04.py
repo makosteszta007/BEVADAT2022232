@@ -52,3 +52,22 @@ def female_top_score(df):
     tuple_max = [female_df['math score'].max(),female_df['reading score'].max(),female_df['writing score'].max()]
     return tuple_max
 print(female_top_score(csv_to_df()))
+##eighth task
+def add_grade(df):
+    df = pn.DataFrame(df)
+    new_df = df.copy()
+    new_df['percentage'] = (new_df['math score'] + new_df['reading score'] + new_df['writing score']) / 300    
+    def get_grade(percentage):
+        if percentage >= 0.9:
+            return 'A'
+        elif percentage >= 0.8:
+            return 'B'
+        elif percentage >= 0.7:
+            return 'C'
+        elif percentage >= 0.6:
+            return 'D'
+        else:
+            return 'F'
+    new_df['grade'] = new_df['percentage'].apply(get_grade)
+    return new_df
+print(add_grade(csv_to_df()))
