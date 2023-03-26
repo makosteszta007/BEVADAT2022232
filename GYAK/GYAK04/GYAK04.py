@@ -22,3 +22,13 @@ def population_density(test_df):
      new_df = test_df.copy()
      new_df['density'] = new_df['population'] / new_df['area']
      return new_df
+ ##fifth task
+def plot_population(test_df):
+    new_df = test_df.copy()
+    new_df['population'] = new_df['population'] / 1000000
+    fig, ax = plt.subplots()
+    ax.set_title('Population of Countries')
+    ax.set_xlabel('Country')
+    ax.set_ylabel('Population (millions)')
+    ax.bar(new_df['Country'], new_df['population'])
+    return fig
