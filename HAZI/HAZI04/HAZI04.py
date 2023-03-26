@@ -35,3 +35,13 @@ def avarage_scores(df):
     avarage_scores = groupby['math score', 'reading score', 'writing score'].mean()
     return avarage_scores
 print(avarage_scores(csv_to_df()))
+##sixth task
+def add_age(df):
+    df = pn.DataFrame(df)
+    new_df = df.copy()
+    np.random.seed(42)
+    ages = np.random.randint(18, 67, size=len(new_df))
+    new_df['age'] = ages
+    return new_df
+print(add_age(csv_to_df()))
+
