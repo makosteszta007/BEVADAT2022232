@@ -13,3 +13,10 @@ def capitalize_columns(df):
     df_data_capitalized.columns = [col.capitalize() if 'e' in col else col for col in df.columns]
     return df_data_capitalized
 print(capitalize_columns(csv_to_df()))
+##third task
+def math_passed_count(df) -> int:
+    df = pn.DataFrame(df)
+    new_df = df.copy()
+    passed = (new_df['math score']>=50).sum()
+    return passed
+print(math_passed_count(csv_to_df()))
