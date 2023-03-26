@@ -11,10 +11,11 @@ def dict_to_dataframe(test_dict):
     return test_df
 ##second task
 def get_column(test_df,area):
-    new_df = dict_to_dataframe(test_df)
+    new_df = test_df.copy()
     return new_df[area]
 ##third task
 def get_top_two(test_df):
-    test_df=dict_to_dataframe(test_df)
-    return test_df.sort_values('area',ascending=False)[:2]
+    new_df=test_df.copy()
+    return new_df.sort_values('area',ascending=False)[:2]
+##fourth task
 
