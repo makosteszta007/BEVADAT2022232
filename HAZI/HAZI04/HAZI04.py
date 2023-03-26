@@ -27,3 +27,11 @@ def did_pre_course(df):
     df_did_precourse=new_df[new_df['test preparation course'].values == "completed"]
     return df_did_precourse
 print(did_pre_course(csv_to_df()))
+##fifth task
+def avarage_scores(df):
+    df = pn.DataFrame(df)
+    new_df = df.copy()
+    groupby = df.groupby('parental level of education')
+    avarage_scores = groupby['math score', 'reading score', 'writing score'].mean()
+    return avarage_scores
+print(avarage_scores(csv_to_df()))
