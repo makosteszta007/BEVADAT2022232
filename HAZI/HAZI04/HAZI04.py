@@ -84,3 +84,13 @@ def writing_hist(df):
     ax.set_xlabel('Writing Score')
     ax.set_ylabel('Number of Students')
     return fig
+##eleventh task
+def ethnicity_pie_chart(df):
+    counts = df['race/ethnicity'].value_counts()
+    percentages = counts / counts.sum() * 100
+    fig, ax = plt.subplots()
+    ax.set_title('Proportion of Students by Race/Ethnicity')
+    ax.pie(percentages,
+           labels=percentages.index,
+           autopct='%1.1f%%')
+    return fig
