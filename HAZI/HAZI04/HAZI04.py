@@ -71,3 +71,15 @@ def add_grade(df):
     new_df['grade'] = new_df['percentage'].apply(get_grade)
     return new_df
 print(add_grade(csv_to_df()))
+##ninth task
+def math_bar_plot(df):
+    df = pn.DataFrame(df)
+    new_df = df.copy()
+    fig, ax = plt.subplots()
+    ax.set_title('Average Math Score by Gender')
+    ax.set_xlabel('Gender')
+    ax.set_ylabel('Math Score')
+    grouped_data = new_df.groupby('gender').mean(numeric_only=True)
+    ax.bar(grouped_data.index, grouped_data['math score']) 
+    return fig
+print(math_bar_plot(csv_to_df()))
