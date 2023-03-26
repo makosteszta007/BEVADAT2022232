@@ -44,4 +44,11 @@ def add_age(df):
     new_df['age'] = ages
     return new_df
 print(add_age(csv_to_df()))
-
+##seventh task 
+def female_top_score(df):
+    df = pn.DataFrame(df)
+    new_df = df.copy()
+    female_df= new_df[new_df['gender']=='female']
+    tuple_max = [female_df['math score'].max(),female_df['reading score'].max(),female_df['writing score'].max()]
+    return tuple_max
+print(female_top_score(csv_to_df()))
