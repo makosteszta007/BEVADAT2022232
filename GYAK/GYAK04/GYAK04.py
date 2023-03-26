@@ -1,3 +1,4 @@
+from tkinter.tix import COLUMN
 import pandas as pn
 ##first task
 stats = {"country": ["Brazil", "Russia", "India", "China", "South Africa"],
@@ -7,3 +8,8 @@ stats = {"country": ["Brazil", "Russia", "India", "China", "South Africa"],
 def dict_to_dataframe(test_dict):
     test_df = pn.DataFrame(test_dict)
     return test_df
+##second task
+def get_column(test_df,area):
+    new_df = dict_to_dataframe(test_df)
+    return new_df[area]
+
