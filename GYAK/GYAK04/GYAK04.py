@@ -1,5 +1,6 @@
-from tkinter.tix import COLUMN
+import numpy as np
 import pandas as pn
+import matplotlib.pyplot as plt
 ##first task
 stats = {"country": ["Brazil", "Russia", "India", "China", "South Africa"],
        "capital": ["Brasilia", "Moscow", "New Dehli", "Beijing", "Pretoria"],
@@ -12,4 +13,8 @@ def dict_to_dataframe(test_dict):
 def get_column(test_df,area):
     new_df = dict_to_dataframe(test_df)
     return new_df[area]
+##third task
+def get_top_two(test_df):
+    test_df=dict_to_dataframe(test_df)
+    return test_df.sort_values('area',ascending=False)[:2]
 
