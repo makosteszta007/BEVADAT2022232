@@ -1,4 +1,3 @@
-import csv
 import pandas as pn
 import matplotlib.pyplot as plt
 import numpy as np
