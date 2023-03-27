@@ -56,7 +56,6 @@ def add_grade(df: pn.DataFrame) -> pn.DataFrame:
             return 'F'
     new_df['grade'] =((new_df['math score'] + new_df['reading score'] + new_df['writing score']) / 300).apply(get_grade)
     return new_df
-print(add_grade(csv_to_df()))
 ##ninth task
 def math_bar_plot(df):
     df = pn.DataFrame(df)
@@ -69,14 +68,13 @@ def math_bar_plot(df):
     ax.bar(grouped_data.index, grouped_data['math score']) 
     return fig
 ##tenth task
-def writing_hist(df):
-    df = pn.DataFrame(df)
+def writing_hist(df: pn.DataFrame):   
     new_df = df.copy()
-    fig, ax = plt.subplots()
-    ax.hist(new_df['writing score'], bins=20)
+    fig, ax = plt.subplots(figsize=(8,6))
+    ax.hist(new_df['writing score'], bins=20, color='#5E86C1')
     ax.set_title('Distribution of Writing Scores')
     ax.set_xlabel('Writing Score')
-    ax.set_ylabel('Number of Students')
+    ax.set_ylabel('Number of Students')       
     return fig
 ##eleventh task
 def ethnicity_pie_chart(df):
