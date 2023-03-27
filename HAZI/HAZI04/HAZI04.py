@@ -6,8 +6,7 @@ def csv_to_df(df='HAZI\HAZI04\StudentsPerformance.csv'):
     df_data= pn.read_csv(df, sep=',')
     return df_data
 ##second task
-def capitalize_columns(df):
-    df = pn.DataFrame(df)
+def capitalize_columns(df: pn.DataFrame) -> pn.DataFrame:   
     df_data_capitalized = df.copy()
     df_data_capitalized.columns = [col.capitalize() if 'e' not in col else col for col in df.columns]
     return df_data_capitalized
@@ -24,12 +23,12 @@ def did_pre_course(df):
     df_did_precourse=new_df[new_df['test preparation course'].values == "completed"]
     return df_did_precourse
 ##fifth task
-def avarage_scores(df):
-    df = pn.DataFrame(df)
+def avarage_scores(df: pn.DataFrame) -> pn.DataFrame:   
     new_df = df.copy()
-    groupby = df.groupby('parental level of education')
-    avarage_scores = groupby['math score', 'reading score', 'writing score'].mean()
+    groupby = new_df.groupby('parental level of education')
+    avarage_scores = groupby[['math score', 'reading score', 'writing score']].mean()
     return avarage_scores
+print(avarage_scores(csv_to_df()))
 ##sixth task
 def add_age(df):
     df = pn.DataFrame(df)
