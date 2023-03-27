@@ -32,9 +32,9 @@ def plot_population(test_df: pn.DataFrame) -> plt.figure:
     ax.set_ylabel('Population (millions)')    
     return fig
 ##sixth task
-def plot_area(test_df):
+def plot_area(test_df: pn.DataFrame) -> plt.figure:
     new_df = test_df.copy()
     fig,ax = plt.subplots()
-    ax.pie(new_df['area'], labels = new_df['country'], autopct = '%1.1%')
+    ax.pie(new_df['area'], labels = new_df['country'])
     ax.set_title('Area of Countries')
     return fig
