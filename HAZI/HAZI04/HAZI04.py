@@ -67,14 +67,17 @@ def math_bar_plot(df):
     ax.bar(grouped_data.index, grouped_data['math score']) 
     return fig
 ##tenth task
-def writing_hist(df: pd.DataFrame):   
-    new_df = df.copy()
-    fig, ax = plt.subplots(figsize=(8,6))
-    ax.hist(new_df['writing score'], bins=20, color='#5E86C1')
+def writing_hist(df: pd.DataFrame): 
+    writing_scores = df['writing score']   
+    fig, ax = plt.subplots()
+    ax.hist(writing_scores) 
     ax.set_title('Distribution of Writing Scores')
     ax.set_xlabel('Writing Score')
-    ax.set_ylabel('Number of Students')       
+    ax.set_ylabel('Number of Students')
+    plt.show()
     return fig
+
+print(writing_hist(csv_to_df()))
 ##eleventh task
 def ethnicity_pie_chart(df):
     counts = df['race/ethnicity'].value_counts()
