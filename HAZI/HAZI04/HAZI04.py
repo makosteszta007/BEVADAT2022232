@@ -1,3 +1,4 @@
+import csv
 import pandas as pn
 import matplotlib.pyplot as plt
 import numpy as np
@@ -11,14 +12,12 @@ def capitalize_columns(df: pn.DataFrame) -> pn.DataFrame:
     df_data_capitalized.columns = [col.capitalize() if 'e' not in col else col for col in df.columns]
     return df_data_capitalized
 ##third task
-def math_passed_count(df) -> int:
-    new_df = df.copy()
-    df = pn.DataFrame(df)
+def math_passed_count(df: pn.DataFrame) -> int:
+    new_df = df.copy()    
     passed = (new_df['math score']>=50).sum()
     return passed
 ##fourth task
-def did_pre_course(df):
-    df = pn.DataFrame(df)
+def did_pre_course(df: pn.DataFrame):    
     new_df = df.copy()
     df_did_precourse=new_df[new_df['test preparation course'].values == "completed"]
     return df_did_precourse
@@ -28,22 +27,20 @@ def avarage_scores(df: pn.DataFrame) -> pn.DataFrame:
     groupby = new_df.groupby('parental level of education')
     avarage_scores = groupby[['math score', 'reading score', 'writing score']].mean()
     return avarage_scores
-print(avarage_scores(csv_to_df()))
 ##sixth task
-def add_age(df):
-    df = pn.DataFrame(df)
+def add_age(df: pn.DataFrame):   
     new_df = df.copy()
     np.random.seed(42)
     ages = np.random.randint(18, 67, size=len(new_df))
     new_df['age'] = ages
     return new_df
 ##seventh task 
-def female_top_score(df):
-    df = pn.DataFrame(df)
+def female_top_score(df: pn.DataFrame) -> tuple:    
     new_df = df.copy()
     female_df= new_df[new_df['gender']=='female']
-    tuple_max = [female_df['math score'].max(),female_df['reading score'].max(),female_df['writing score'].max()]
+    tuple_max = (female_df['math score'].max(),female_df['reading score'].max(),female_df['writing score'].max())
     return tuple_max
+print(female_top_score(csv_to_df()))
 ##eighth task
 def add_grade(df):
     df = pn.DataFrame(df)
