@@ -73,8 +73,7 @@ def writing_hist(df: pd.DataFrame):
     ax.hist(writing_scores) 
     ax.set_title('Distribution of Writing Scores')
     ax.set_xlabel('Writing Score')
-    ax.set_ylabel('Number of Students')
-    plt.show()
+    ax.set_ylabel('Number of Students')    
     return fig
 
 print(writing_hist(csv_to_df()))
