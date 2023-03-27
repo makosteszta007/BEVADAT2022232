@@ -75,8 +75,6 @@ def writing_hist(df: pd.DataFrame):
     ax.set_xlabel('Writing Score')
     ax.set_ylabel('Number of Students')    
     return fig
-
-print(writing_hist(csv_to_df()))
 ##eleventh task
 def ethnicity_pie_chart(df):
     counts = df['race/ethnicity'].value_counts()
