@@ -9,12 +9,12 @@ def csv_to_df(df='HAZI\HAZI04\StudentsPerformance.csv'):
 def capitalize_columns(df):
     df = pn.DataFrame(df)
     df_data_capitalized = df.copy()
-    df_data_capitalized.columns = [col.capitalize() if 'e' in col else col for col in df.columns]
+    df_data_capitalized.columns = [col.capitalize() if 'e' not in col else col for col in df.columns]
     return df_data_capitalized
 ##third task
 def math_passed_count(df) -> int:
-    df = pn.DataFrame(df)
     new_df = df.copy()
+    df = pn.DataFrame(df)
     passed = (new_df['math score']>=50).sum()
     return passed
 ##fourth task
