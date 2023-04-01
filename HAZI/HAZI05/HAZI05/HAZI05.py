@@ -5,7 +5,7 @@ from sklearn.metrics import confusion_matrix
 import seaborn as sns
 
 class KNNClassifier:
-
+    
     def k_neighbors(self) -> int:
         return self.k
 
