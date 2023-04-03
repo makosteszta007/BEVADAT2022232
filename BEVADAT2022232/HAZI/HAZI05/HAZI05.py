@@ -20,9 +20,7 @@ def load_csv(path: str) -> Tuple[pd.core.frame.DataFrame, pd.core.series.Series]
      dataFrame = dataFrame.sample(frac=1, random_state=42).reset_index(drop=True)
      return dataFrame.iloc[:,:-1], dataFrame.iloc[:,-1]
 ##fourth task  
-def train_test_split(self,
-              features:pd.core.frame.DataFrame,
-              labels:pd.core.series.Series):    
+def train_test_split(self, features:pd.core.frame.DataFrame,labels:pd.core.series.Series):    
      test_size = int(len(features) * self.test_split_ratio)
      train_size = len(features) - test_size
      assert len(features) == test_size + train_size, "Size mismatch!"

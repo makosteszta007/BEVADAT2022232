@@ -1,21 +1,10 @@
 {
   "ExpandedNodes": [
     "",
-<<<<<<< HEAD
     "\\BEVADAT2022232",
-    "\\BEVADAT2022232\\GYAK",
-    "\\BEVADAT2022232\\HAZI",
-    "\\BEVADAT2022232\\HAZI\\HAZI05",
-    "\\BEVADAT2022232\\HAZI\\HAZI05\\HAZI05"
+    "\\BEVADAT2022232\\GYAK\\GYAK05",
+    "\\BEVADAT2022232\\HAZI\\HAZI05"
   ],
-  "SelectedNode": "\\BEVADAT2022232\\HAZI\\HAZI05\\HAZI05\\HAZI05.py",
-=======
-    "\\GYAK",
-    "\\GYAK\\GYAK04",
-    "\\HAZI",
-    "\\HAZI\\HAZI04"
-  ],
-  "SelectedNode": "\\HAZI\\HAZI04\\HAZI04.py",
->>>>>>> c9be29ca82b3eb93a0089112a39e8baae4d593ef
+  "SelectedNode": "\\BEVADAT2022232\\HAZI",
   "PreviewInSolutionExplorer": false
 }
