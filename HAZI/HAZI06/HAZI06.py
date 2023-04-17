@@ -21,11 +21,10 @@ Y_pred = classifier.predict(X_test)
 print(accuracy_score(Y_test, Y_pred))
 
 """
-A feladat leírása alapján megcsináltam a .py fájlokat, HAZI06.ipynb-ben teszteltem, ahol a következõ eredményeket is kaptam.
-Sajnos a DecisionTree törlõdött a gépemrõl, ezért azt a moodle-be feltöltött alapján újra létrehoztam, a Node-al együtt, majd megkapta a paramétereket.
+Elkészítettem a .py fájlokat, teszteltem, amiben a következõ eredményeket kaptam.
 Nehézségek:
-    Figyelmetlenségbõl adódó hibák: rossz elnevezések, elírások, data mappa hiánya -> nem tudta elmenteni a NJ.csv-t
-    A python néha szeret errort adni teljesen egyértelmûen jó példákra.
+    Figyelmetlenségihibák: elírások, data mappa hiánya -> nem tudta elmenteni a NJ.csv-t
+    A python néha szeret errort adni egyértelmûen jó példákra.
 Eredmények:
 i/    min_samples_split:  max_depth:  accuracy:
 1/            1               1       0.7828333333333334
