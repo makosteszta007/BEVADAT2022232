@@ -34,14 +34,7 @@ class LinearRegression:
         return self.losses
             
 
-    def predict(self, X_test):
-        # Run the model on the test set
-        #self.pred = []
-        #for X in self.X_test:
-        #    y_pred = self.m*X + self.c
-        #    self.pred.append(y_pred)
-        #print(self.pred)
-        #print(self.y_test)
+    def predict(self, X_test):      
         return self.m * X_test + self.c
 
     def evaluate(self, x, y):
