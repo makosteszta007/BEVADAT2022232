@@ -10,17 +10,7 @@ from sklearn.model_selection import train_test_split
 from sklearn.linear_model import LinearRegression, LogisticRegression
 from sklearn.metrics import mean_squared_error
 
-# %%
-'''
-Készíts egy függvényt, betölti majd vissza adja az iris adathalmazt.
 
-
-Egy példa a kimenetre: iris
-return type: sklearn.utils.Bunch
-függvény neve: load_iris_data
-'''
-
-# %%
 #1
 def load_iris_data() -> skl.utils.Bunch:
     return load_iris()
@@ -28,18 +18,7 @@ def load_iris_data() -> skl.utils.Bunch:
 #irisData = load_iris_data()
 #print(irisData)
 
-# %%
-'''
-Készíts egy függvényt, ami a betölti az virágokhoz tartozó levél méretket egy dataframebe, majd az elsõ 5 sort visszaadja.
-Minden oszlop tartalmazza, hogy az milyen mérethez tartozik.
 
-Egy példa a bemenetre: iris
-Egy példa a kimenetre: iris_df
-return type: pandas.core.frame.DataFrame
-függvény neve: check_data
-'''
-
-# %%
 #2
 def check_data(iris) -> pd.core.frame.DataFrame:
     iris_df = pd.DataFrame(iris.data, columns=iris.feature_names).head(5)
