@@ -49,4 +49,3 @@ class ReLU():
 # %%
 activation = ReLU()
 print(activation.forward_pass(output))
-
