@@ -1,52 +1,96 @@
 # %%
-import numpy as np
+import tensorflow as tf
 
 # %%
-class Dense:
-    """A fully-connected NN layer.
-    Parameters:
-    -----------
-    n_output: int
-        The number of neurons in the layer.
-    n_input: int
-        The expected input shape of the layer. For dense layers a single digit specifying
-        the number of features of the input. Must be specified if it is the first layer in
-        the network.
-    """
+'''
+Készíts egy metódust ami a mnist adatbázisból betölti a train és test adatokat. (tf.keras.datasets.mnist.load_data())
+Majd a tanitó, és tesztelő adatokat normalizálja, és vissza is tér velük.
 
-    def __init__(self, n_output, n_input=None):
-        self.layer_input = None
-        self.n_input = n_input
-        self.n_output = n_output
-        self.trainable = True
-        self.W = None
-        self.bias = None
-        self.initialize()
 
-    def initialize(self):
-        # Initialize the weights
-        np.random.seed(42)
-        self.W = np.random.normal(0.0, 1, (self.n_input, self.n_output))
-        self.bias = np.random.random(size=(self.n_output))
-
-    def forward_pass(self, X):
-        output = np.dot(X, self.W) + self.bias
-        return output
-        
+Egy példa a kimenetre: train_images, train_labels, test_images, test_labels
+függvény neve: mnist_digit_data
+'''
 
 # %%
-input_data = np.array([[1, 2, 3, 4, 5]])
-layer = Dense(3, n_input=5)
+def mnist_digit_data():
+    (train_images, train_labels), (test_images,
+                                   test_labels) = tf.keras.datasets.mnist.load_data()
+    train_images = train_images / 255.0
+    test_images = test_images / 255.0
+    return train_images, train_labels, test_images, test_labels
 
-output = layer.forward_pass(input_data)
-print(output)
-
-# %%
-class ReLU():
-    def forward_pass(self, x):
-        return np.maximum(x, 0)
 
 # %%
-activation = ReLU()
-print(activation.forward_pass(output))
+'''
+Készíts egy neurális hálót, ami képes felismerni a kézírásos számokat.
+A háló kimenete legyen 10 elemű, és a softmax aktivációs függvényt használja.
+Hálon belül tetszőleges számú réteg lehet.
+
+
+Egy példa a kimenetre: model,
+return type: keras.engine.sequential.Sequential
+függvény neve: mnist_model
+'''
+
+# %%
+def mnist_model():
+    model = tf.keras.Sequential([
+        tf.keras.layers.Flatten(input_shape=(28, 28)),
+        tf.keras.layers.Dense(128, activation='relu'),
+        tf.keras.layers.Dense(10, activation='softmax')])
+    return model
+
+
+# %%
+'''
+Készíts egy metódust, ami a bemeneti hálot compile-olja.
+Optimizer: Adam
+Loss: SparseCategoricalCrossentropy(from_logits=False)
+
+Egy példa a bemenetre: model
+Egy példa a kimenetre: model
+return type: keras.engine.sequential.Sequential
+függvény neve: model_compile
+'''
+
+# %%
+def model_compile(model):
+    model.compile(optimizer='adam',
+                  loss=tf.keras.losses.SparseCategoricalCrossentropy(
+                      from_logits=False),
+                  metrics=['accuracy'])
+    return model
+
+
+# %%
+'''
+Készíts egy metódust, ami a bemeneti hálót feltanítja.
+
+Egy példa a bemenetre: model,epochs, train_images, train_labels
+Egy példa a kimenetre: model
+return type: keras.engine.sequential.Sequential
+függvény neve: model_fit
+'''
+
+# %%
+def model_fit(model, epochs, train_images, train_labels):
+    model.fit(train_images, train_labels, epochs)
+    return model
+
+
+# %%
+'''
+Készíts egy metódust, ami a bemeneti hálót kiértékeli a teszt adatokon.
+
+Egy példa a bemenetre: model, test_images, test_labels
+Egy példa a kimenetre: test_loss, test_acc
+return type: float, float
+függvény neve: model_evaluate
+'''
+
+# %%
+def model_evaluate(model, test_images, test_labels):
+    test_loss, test_acc = model.evaluate(test_images, test_labels)
+    return test_loss, test_acc
+
 
