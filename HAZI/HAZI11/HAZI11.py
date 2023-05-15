@@ -45,4 +45,49 @@ def cifar100_model():
     model.add(tf.keras.layers.Dense(512, activation='relu'))
     model.add(tf.keras.layers.Dense(100, activation='softmax'))
     return model
-#m=cifar100_model()
+
+# %%
+'''
+Készíts egy metódust, ami a bemeneti hálot compile-olja.
+Optimizer: Adam
+Loss: SparseCategoricalCrossentropy(from_logits=False)
+
+Egy példa a bemenetre: model
+Egy példa a kimenetre: model
+return type: keras.engine.sequential.Sequential
+függvény neve: model_compile
+'''
+
+
+# %%
+def model_compile(model):
+    model.compile(optimizer='adam',
+                loss=tf.keras.losses.SparseCategoricalCrossentropy(from_logits=False),
+                metrics=['accuracy'])
+    return model
+# %%
+'''
+Készíts egy metódust, ami a bemeneti hálót feltanítja.
+
+Egy példa a bemenetre: model,epochs, train_images, train_labels
+Egy példa a kimenetre: model
+return type: keras.engine.sequential.Sequential
+függvény neve: model_fit
+'''
+def model_fit(model,epochs, train_images, train_labels):
+    model.fit(train_images, train_labels, epochs=epochs)
+    return model
+
+# %%
+'''
+Készíts egy metódust, ami a bemeneti hálót kiértékeli a teszt adatokon.
+
+Egy példa a bemenetre: model, test_images, test_labels
+Egy példa a kimenetre: test_loss, test_acc
+return type: float, float
+függvény neve: model_evaluate
+'''
+def model_evaluate(model, test_images, test_labels):
+    test_loss, test_acc = model.evaluate(test_images,  test_labels, verbose=2)
+    return (test_loss,test_acc)
+
